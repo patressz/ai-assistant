@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Neuron\Agents;
 
 use NeuronAI\Agent\Agent;
-use NeuronAI\Agent\SystemPrompt;
 use NeuronAI\Providers\AIProviderInterface;
 use NeuronAI\Providers\OpenAI\OpenAI;
 use NeuronAI\Tools\ToolInterface;
@@ -24,9 +23,7 @@ class Assistant extends Agent
 
     public function instructions(): string
     {
-        return (string) new SystemPrompt(
-            ...config('neuron.system_prompt')
-        );
+        return view('ai.prompts.system')->render();
     }
 
     /**
