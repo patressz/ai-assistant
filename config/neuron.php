@@ -117,7 +117,7 @@ return [
             'key' => env('ELEVENLABS_KEY'),
             'model' => env('ELEVENLABS_STT_MODEL', 'elevenlabs/stt-v1'),
             'parameters' => [],
-        ]
+        ],
     ],
 
     /*
@@ -164,7 +164,7 @@ return [
             'key' => env('MISTRAL_KEY'),
             'model' => env('MISTRAL_EMBEDDING_MODEL', 'mistral-7b-embed-v1'),
             'dimensions' => 1024,
-        ]
+        ],
     ],
 
     /*
