@@ -1,10 +1,9 @@
 <?php
 
-
-use App\Telegram\Handlers\ChatHandler;
-use SergiX44\Nutgram\Nutgram;
-
 /** @var Nutgram $bot */
+
+use App\Telegram\Handlers\ChatRouter;
+use SergiX44\Nutgram\Nutgram;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +19,4 @@ $bot->onCommand('start', function (Nutgram $bot) {
     $bot->sendMessage('Ahoj, som pripraveny.');
 })->description('The start command!');
 
-$bot->onText('(.*)', ChatHandler::class);
+$bot->onMessage(ChatRouter::class);

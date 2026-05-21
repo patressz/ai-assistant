@@ -94,21 +94,21 @@ return [
          */
         'openai-tts' => [
             'key' => env('OPENAI_KEY'),
-            'model' => env('OPENAI_TTS_MODEL', 'gpt-5-mini'),
+            'model' => env('OPENAI_TTS_MODEL', 'gpt-4o-mini-tts'),
             'voice' => env('OPENAI_VOICE', 'alloy'),
             'parameters' => [],
         ],
 
         'openai-stt' => [
             'key' => env('OPENAI_KEY'),
-            'model' => env('OPENAI_STT_MODEL', 'gpt-4o-transcribe'),
-            'language' => 'en',
+            'model' => env('OPENAI_STT_MODEL', 'gpt-4o-mini-transcribe'),
+            'language' => env('OPENAI_STT_LANGUAGE', 'sk'),
             'parameters' => [],
         ],
 
         'elevenlabs-tts' => [
             'key' => env('ELEVENLABS_KEY'),
-            'model' => env('ELEVENLABS_TTS_MODEL', 'elevenlabs/tts-v1'),
+            'model' => env('ELEVENLABS_TTS_MODEL', 'eleven_multilingual_v2'),
             'voiceId' => env('ELEVENLABS_VOICE_ID'),
             'parameters' => [],
         ],
